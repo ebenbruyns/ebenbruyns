@@ -1,6 +1,4 @@
-- name: Metrics embed
-  
-            
+name: Metrics
 on:
   schedule: [{cron: "0 0 * * *"}]
   workflow_dispatch:
@@ -11,7 +9,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@v3.34
+      - uses: ebenbruyns/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           config_timezone: NewZealand/Auckland
